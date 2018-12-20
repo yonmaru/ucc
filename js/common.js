@@ -39,3 +39,14 @@ $(function() {
   });
     
 });
+
+
+$(function () {
+    var windowWidth = $(window).width();
+    var windowSm = 640;
+    if (windowWidth <= windowSm) {
+        $('#footer-links').insertBefore('#insert-anc');
+        $('#footer-nav1').insertAfter('#footer-nav2 ul');
+        $('#footer-nav2').insertAfter('#insert-anc');
+    }    
+});
