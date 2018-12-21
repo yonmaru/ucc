@@ -390,6 +390,7 @@
 #footer {
     padding:72px 0;
     background-color: #F5F4F2;
+    min-width: 960px;
 }
 .footer-bnrs {}
 .footer-bnrs li {
@@ -430,6 +431,7 @@
     display: inline-block;
     background-color: #fff;
     padding:0 0.5em;
+    white-space: nowrap;
 }
 .sns-links li {
     float:left;
@@ -462,6 +464,7 @@
     display: inline-block;
     background-color: #fff;
     padding:0 0.5em;
+    white-space: nowrap;
 }
 .app-links li {
     float:left;
@@ -542,4 +545,9 @@
 .footer-nav2 .copy {
     float: right;
     font-size:1rem;
+}
+
+
+#gnav {
+    display: none;
 }
