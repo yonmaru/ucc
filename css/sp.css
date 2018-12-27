@@ -197,9 +197,6 @@ html {
     position: relative;
     top:-1px;
 }
-#news-contents1 .news-info .news-icon {
-    background-color: #C72939;
-}
 .news-date {
     color:#818181;
 }
@@ -220,8 +217,16 @@ html {
     margin-top:0.3em;
 }
 #news-contents1 .news-morebtn_sp {
-    border:1px solid #c92634;
-    color:#c92634;
+    border:1px solid #783037;
+    color:#783037;
+}
+#news-contents2 .news-morebtn_sp {
+    border:1px solid #51694e;
+    color:#51694e;
+}
+#news-contents3 .news-morebtn_sp {
+    border:1px solid #3e4e73;
+    color:#3e4e73;
 }
 
 
@@ -529,6 +534,7 @@ html {
     position: absolute;
     z-index: 10;
     display: none;
+    width:100%;
 }
 #gnav .ddmenu {}
 #gnav .ddmenu li {
@@ -537,10 +543,10 @@ html {
 #gnav .ddmenu li a {
     color:#fff;
     text-decoration: none;
-    font-size:2.6rem;
+    font-size:2.4rem;
     font-weight:bold;
     font-family: 'Montserrat', sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     display: block;
     padding:3% 0;
 }

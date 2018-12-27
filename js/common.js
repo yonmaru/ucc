@@ -72,6 +72,13 @@ $(function () {
         $("#gnav").slideToggle("fast");
     })
     
+    $(".news-tab").click(function() {
+        $(".news-contents").hide();
+        $(".news-tab").removeClass("current");
+        $(this).addClass("current");
+        $("#"+$(this).data("box-target")).show();
+        return false;
+    });
     
 });
 

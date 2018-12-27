@@ -107,40 +107,46 @@
     -moz-border-radius: 5px 5px 0 0;
 }
 .news-tab li#news-tab1 {
-    background-color: #FEF2F3;
-    color: #c92634;
+    background-color: #faf6f6;
+    color: #783037;
 }
 .news-tab li#news-tab2 {
-    background-color: #E8F3E7;
-    color: #4a6b46;
+    background-color: #e9f0e8;
+    color: #51694e;
 }
 .news-tab li#news-tab3 {
-    background-color: #DDE3EF;
-    color: #374b7a;
+    background-color: #f0f3f8;
+    color: #3e4e73;
 }
 .news-tab li#news-tab1.current,
 .news-tab li#news-tab1:hover {
-    background-color: #C72939;
+    background-color: #783037;
     color: #fff;
 }
 .news-tab li#news-tab2.current,
 .news-tab li#news-tab2:hover {
-    background-color: #32632D;
+    background-color: #51694e;
     color: #fff;
 }
 .news-tab li#news-tab3.current,
 .news-tab li#news-tab3:hover {
-    background-color: #213F83;
+    background-color: #3e4e73;
     color: #fff;
 }
 .news-contents {
     padding:32px 40px;
 }
 #news-contents1 {
-    background-color: #FEF2F3;
+    background-color: #faf6f6;
 }
-#news-contents2 {}
-#news-contents3 {}
+#news-contents2 {
+    background-color: #e9f0e8;
+    display: none;
+}
+#news-contents3 {
+    background-color: #f0f3f8;
+    display: none;
+}
 .news-contents-box {
     float:left;
     width:205px;
@@ -171,7 +177,13 @@
     top:-1px;
 }
 #news-contents1 .news-info .news-icon {
-    background-color: #C72939;
+    background-color: #783037;
+}
+#news-contents2 .news-info .news-icon {
+    background-color: #51694e;
+}
+#news-contents3 .news-info .news-icon {
+    background-color: #3e4e73;
 }
 .news-date {
     color:#818181;
@@ -192,8 +204,16 @@
     text-decoration: none;
 }
 #news-contents1 .news-morebtn_pc a {
-    border:2px solid #c92634;
-    color:#c92634;
+    border:2px solid #783037;
+    color:#783037;
+}
+#news-contents2 .news-morebtn_pc a {
+    border:2px solid #51694e;
+    color:#51694e;
+}
+#news-contents3 .news-morebtn_pc a {
+    border:2px solid #3e4e73;
+    color:#3e4e73;
 }
 .news-morebtn_sp {
     display:none;
@@ -550,4 +570,7 @@
 
 #gnav {
     display: none;
+}
+#gnav .ddmenu li a {
+    color:#fff;
 }
