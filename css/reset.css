@@ -93,6 +93,54 @@ input {
 	-webkit-appearance: none;
 }
 
+input, button, textarea, select {
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.contact table td input,
+.contact table td select,
+.contact table td option,
+.contact table td textarea {
+	border:1px solid #e0e0e0;
+	margin-left:8px;
+	background-color:#fbfbfb;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	padding:4px 8px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px;
+	-ms-border-radius: 2px;
+	line-height:24px;
+	font-size:16px;
+}
+.contact table td input:focus,
+.contact table td textarea:focus,
+.contact table td select:focus,
+.contact table td textarea:focus {
+	border:1px solid #2A92C8 !important;
+	background-color:#fff;
+	outline:none;
+}
+select {
+	background:url(../img/contact/arrow.png) no-repeat right center;
+	background-size:22px 32px;
+	padding-right:28px !important;
+	cursor: pointer;
+}
+
+
 * {
 	box-sizing: border-box;
 	-webkit-font-feature-settings: 'palt';
@@ -100,6 +148,8 @@ input {
 }
 
 .clearfix:after,
+a.news-boxes:after,
+a.procat-boxes:after,
 div:after,
 ul:after,
 article:after,
