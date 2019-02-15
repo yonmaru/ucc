@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("form.css");
 
 
 
@@ -55,7 +56,7 @@
 }
 #header #menu-btn span:nth-of-type(2) {
     margin:28% 0;
-    width:80%;
+    width:100%;
 }
 #header.gnav-open #menu-btn span:nth-of-type(1) {
     -webkit-transform: translateY(11px) rotate(-45deg);
@@ -315,6 +316,10 @@
 }
 .kodawari-row4 {
     background-image: url(../img/top/bg08.jpg);
+    background-size: cover;
+}
+.kodawari-row5 {
+    background-image: url(../img/top/bg09.jpg);
     background-size: cover;
 }
 .kodawari-row .inner {
@@ -625,6 +630,11 @@
 .u-title p {
     padding:1em 200px;
     font-size: 2.2rem;
+    line-height: 1.8;
+}
+.u-title.small p {
+    padding:1em 200px;
+    font-size: 1.8rem;
     line-height: 1.8;
 }
 .common-section-title {
@@ -1045,18 +1055,18 @@
     background-color: #74412e;
     color:#fff;
 }
-.tab3 li:nth-of-type(1).active a,
-.tab3 li:nth-of-type(1) a:hover {
+.news .tab3 li:nth-of-type(1).active a,
+.news .tab3 li:nth-of-type(1) a:hover {
     background-color: #773037;
     color:#fff;
 }
-.tab3 li:nth-of-type(2).active a,
-.tab3 li:nth-of-type(2) a:hover {
+.news .tab3 li:nth-of-type(2).active a,
+.news .tab3 li:nth-of-type(2) a:hover {
     background-color: #51684E;
     color:#fff;
 }
-.tab3 li:nth-of-type(3).active a,
-.tab3 li:nth-of-type(3) a:hover {
+.news .tab3 li:nth-of-type(3).active a,
+.news .tab3 li:nth-of-type(3) a:hover {
     background-color: #384C79;
     color:#fff;
 }
@@ -1466,4 +1476,652 @@
 }
 .news-bnrarea li:nth-of-type(2n) {
     float: right;
+}
+
+
+
+/* ------------------------------------------------------------------------ add 20190128 ログイン*/
+.header-point,
+.header-charge {
+    color:#693929;
+    font-size:2.2rem;
+    width:auto !important;
+    height:auto !important;
+    margin:0.2em 2em 0 0 !important;
+}
+.header-point:before,
+.header-charge:before {
+    display:inline-block;
+    font-size:1.2rem;
+    background-color: #693929;
+    color: #fff;
+    text-align: center;
+    padding:0.2em 0.5em;
+    vertical-align: text-top;
+    letter-spacing: 5px;
+    text-indent: 5px;
+    margin-right:1em;
+}
+.header-point:after,
+.header-charge:after {
+    display:inline-block;
+    font-size:1.6rem;
+}
+.header-point {}
+.header-point:before {
+    content:"ポイント";
+}
+.header-point:after {
+    content:"pt";
+}
+.header-charge {}
+.header-charge:before {
+    content:"残　高";
+}
+.header-charge:after {
+    content:"円";
+}
+.header-login_sp {
+    display:none;
+}
+#footer-loginlink {
+    margin-top:3em;
+}
+#footer-loginlink ul {
+    width:100%;
+    text-align: center;
+}
+#footer-loginlink li {
+    font-size: 1.8rem;
+    display: inline-block;
+}
+#footer-loginlink li ~ li:before {
+    content:"｜";
+    display: inline-block;
+    padding:0 1em;
+}
+#footer-loginlink li a {
+    color:#693929;
+}
+#footer-loginlink li a:hover {
+    color:#A3583F;
+    text-decoration: none;
+}
+
+
+
+/* ------------------------------------------------------------------------ add 20190130 店舗一覧*/
+.storelist-table {
+    width:100%;
+    border:1px solid #ccc;
+}
+.storelist-table tr {}
+.storelist-table th,
+.storelist-table td {
+    font-size: 1.8rem;
+    padding:0.5em 1em;
+}
+.storelist-table th {
+    text-align: left;
+    color: #fff;
+    background-color:#693929;
+}
+.storelist-table td {}
+.storelist-table tr:nth-of-type(2n+1) td {
+    background-color: #F7ECE2;
+}
+.storelist-table td a {
+    text-decoration: none;
+    color:#693929;
+    line-height: 36px;
+}
+.storelist-table td a:hover {
+    text-decoration: underline;
+}
+.storelist-table td.category01 {}
+.storelist-table td.category01:before {
+    content:"";
+    width:36px;
+    height:36px;
+    display: block;
+    background: url(../img/shop/icon_shop01.png) no-repeat 0 0;
+    background-size: cover;
+    float:left;
+    vertical-align: bottom;
+    margin-right:0.8em;
+}
+.storelist-pager {
+    padding:2em 0 0;
+}
+.storelist-pager-inner {
+    text-align: center;
+    font-size: 0;
+}
+.storelist-pager span {
+    display: inline-block;
+    border: 1px solid #fff;
+}
+.storelist-pager span a {
+    display: block;
+    text-align: center;
+    padding:0.5em 0;
+    font-size: 1.5rem;
+    min-width: 2.6em;
+    text-decoration: none;
+    color:#693929;
+    background-color:#F9F5F1;
+}
+.storelist-pager span.active {}
+.storelist-pager span.active a {
+    background-color: #693929;
+    color:#fff;
+    font-weight: bold;
+}
+
+
+
+/* ------------------------------------------------------------------------ add 20190131 クーポンLP*/
+.couponlp-section01 {}
+.couponlp-section01 .inner {
+    width:720px;
+    margin:0 auto;
+}
+.couponlp-box {
+    padding:0 0 96px;
+}
+.couponlp-box h3 {
+    position: relative;
+    padding:0.8em 0 0.8em 6em;
+    font-size:2rem;
+    line-height: 1.5;
+    background: url(../img/coupon/img01.png) no-repeat 98% 70% #EEE9DF;
+    background-size: 65px;
+}
+.couponlp-box h3.coupon-h3-1 {}
+.couponlp-box h3.coupon-h3-2 {}
+.couponlp-box h3.coupon-h3-3 {}
+.couponlp-box h3:before {
+    display: block;
+    position: absolute;
+    background: url(../img/coupon/bg01.png) no-repeat right top #744231;
+    background-size: contain;
+    color:#fff;
+    top:0;
+    left:0;
+    bottom:0;
+    padding:0.8em 1.5em 0.8em 1em;
+}
+.couponlp-box h3.coupon-h3-1:before {
+    content: "特典１";
+}
+.couponlp-box h3.coupon-h3-2:before {
+    content: "特典２";
+    line-height: 3;
+}
+.couponlp-box h3.coupon-h3-3:before {
+    content: "特典３";
+}
+.couponlp-image {
+    padding:40px 0 24px;
+    width:480px;
+    margin:0 auto;
+}
+.couponlp-image img {}
+.couponlp-box h4 {
+    color: #744231;
+    font-size:2.2rem;
+    width:480px;
+    margin:0 auto;
+    padding:0 0 0.6em;
+}
+.couponlp-box h4:before {
+    content:"";
+    width:28px;
+    height:32px;
+    display: inline-block;
+    background: url(../img/coupon/icon01.png) no-repeat left center;
+    background-size: contain;
+    position: relative;
+    top:6px;
+    margin-right:0.4em;
+}
+.couponlp-box ul {
+    width:480px;
+    margin:0 auto;
+}
+.couponlp-box li {
+    font-size: 2rem;
+    text-indent: -1em;
+    padding-left:1em;
+    line-height: 1.8;
+}
+.couponlp-box li:before {
+    content:"・";
+}
+.couponlp-btn {
+    width:600px;
+    padding:56px 0 0;
+    margin:0 auto;
+}
+.couponlp-btn a {}
+.couponlp-btn img {}
+.coupon-aboutpc {
+    padding:80px 0 24px;
+}
+.coupon-aboutpc img {
+    display: block;
+    width:100%;
+}
+.backbtn {
+    width:240px;
+    margin:0 auto;
+}
+.backbtn a {
+    display: block;
+    color:#744231;
+    border: 2px solid #744231;
+    text-align: center;
+    text-decoration: none;
+    font-size:1.6rem;
+    padding:0.6em 0;
+    transition: all 0.1s linear;
+}
+.backbtn a:hover {
+    color:#fff;
+    background-color: #744231;
+}
+
+
+
+/* ------------------------------------------------------------------------ add 20190131 サイトマップ*/
+.sitemap-section {
+    padding:0 0 6em;
+}
+.sitemap-row {
+    background-color: #F6E9DE;
+    margin:0 0 1em;
+    padding:1em;
+}
+.sitemap-row dl {}
+.sitemap-row dt,
+.sitemap-row dd {
+}
+.sitemap-row dt {
+    
+}
+.sitemap-row dd {
+    background-color: #fff;
+    width:49%;
+    margin:1em 0 0;
+}
+.sitemap-row dd:nth-of-type(2n+1) {
+    float:left;
+}
+.sitemap-row dd:nth-of-type(2n) {
+    float:right;
+}
+.sitemap-row dt a,
+.sitemap-row dd a {
+    display: block;
+    color:#744231;
+    text-decoration: none;
+    font-size:1.6rem;
+}
+.sitemap-row dt a {
+    padding:0 1em 0;
+    font-weight: bold;
+    position: relative;
+}
+.sitemap-row dd a {
+    padding:0.8em 1em;
+    position: relative;
+}
+.sitemap-row dd a:after {
+    content:"";
+    display:block;
+    width:6px;
+    height:6px;
+    border-top:2px solid #744231;
+    border-right:2px solid #744231;
+    position: absolute;
+	top: 50%;
+	right: 3%;
+	-webkit-transform: translate(0%, -50%) rotate(45deg);
+	-moz-transform: translate(0%, -50%) rotate(45deg);
+	-ms-transform: translate(0%, -50%) rotate(45deg);
+	-o-transform: translate(0%, -50%) rotate(45deg);
+	transform: translate(0%, -50%) rotate(45deg);
+}
+.sitemap-section .backbtn {
+    margin:5em auto 0;
+}
+
+
+
+/* ------------------------------------------------------------------------ add 20190207 珈琲教室*/
+.school-section01 .inner {
+    width:720px;
+    margin:0 auto;
+}
+.school h3 {
+    background-color: #744231;
+    color:#fff;
+    font-size:2rem;
+    padding:0.6em 1.5em;
+}
+.schoolinfo,
+.schoolinfo-detail {
+    width:640px;
+    margin:0 auto;
+}
+.schoolinfo {}
+.schoolinfo img {
+    width:480px;
+    margin: 40px auto 24px;
+}
+.schoolinfo h4 {
+    font-size:2.2rem;
+    font-weight: bold;
+    margin:0 0 0.5em;
+}
+.schoolinfo h4:before {
+    content:"【"
+}
+.schoolinfo h4:after {
+    content:"】"
+}
+.schoolinfo p {
+    font-size:1.8rem;
+}
+
+.schoolinfo-detail {
+    padding:5em 0 0;
+}
+.schoolinfo-detail h5 {
+    background-color: #EEE9DF;
+    font-size:1.8rem;
+    padding:0.6em 1.5em;
+}
+.schoolinfo-detail p {
+    font-size:1.5rem;
+    line-height: 2;
+    padding:1em 1.5em;
+}
+.schoolinfo-detail table {
+    width:100%;
+    margin:0.5em 0 40px;
+}
+.schoolinfo-detail th,
+.schoolinfo-detail td {
+    font-size:1.6rem;
+    padding:0.5em 1em;
+    border-bottom: 1px solid #fff;
+}
+.schoolinfo-detail th {
+    font-weight: bold;
+    text-align: left;
+    background-color: #DCDCDC;
+    color:#666;
+    width:31.25%;
+}
+.schoolinfo-detail td {
+    background-color: #f7f7f7;
+}
+
+.school .backbtn {
+    margin:5em auto 0;
+}
+
+
+
+
+/* ------------------------------------------------------------------------ add 20190207 プレシャスメンバーズ*/
+.precious-section01 .inner {
+    width:720px;
+    margin:0 auto;
+}
+.precious h3 {
+    background-color: #744231;
+    color:#fff;
+    font-size:2rem;
+    padding:0.6em 1.5em;
+}
+.precious-contents-inner {
+    width:640px;
+    margin:0 auto;
+    padding:32px 0 64px;
+}
+.precious-contents-inner p {
+    font-size:1.8rem;
+}
+.precious-point {
+    position: relative;
+    background-color: #EEE9DF;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    margin:24px 0;
+}
+.precious-point-head {
+    width:80px;
+    height:80px;
+    background-color: #744231;
+    color:#fff;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    position: relative;
+    float:left;
+}
+.precious-point-head-inner {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    line-height: 1;
+}
+.precious-point-head span {
+    display: block;
+    font-size:4.2rem;
+    line-height: 1;
+}
+.precious-point p {
+    position: absolute;
+    font-size:1.6rem;
+    width:512px;
+	top: 50%;
+	left: 96px;
+	-webkit-transform: translate(0%, -50%);
+	-moz-transform: translate(0%, -50%);
+	-ms-transform: translate(0%, -50%);
+	-o-transform: translate(0%, -50%);
+	transform: translate(0%, -50%);
+}
+.precious-btns {
+    padding:12px 0 0;
+}
+.precious-btns .precious-btn {
+    width:320px;
+    margin:24px auto;
+}
+.precious-btns .precious-btn a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size:1.6rem;
+    padding:0.6em 0;
+    transition: all 0.1s linear;
+}
+.precious-btns .precious-btn01 a {
+    background-color: #744231;
+    color:#fff;
+    border: 2px solid #744231;
+}
+.precious-btns .precious-btn01 a:hover {
+    color:#fff;
+    background-color: #8C4F3A;
+}
+.precious-btns .precious-btn02 a {
+    color:#744231;
+    border: 2px solid #744231;
+}
+.precious-btns .precious-btn02 a:hover {
+    color:#fff;
+    background-color: #744231;
+}
+.precious-btns2 {
+    padding:12px 0 48px;
+}
+.precious-btns2 li {
+    width:48.75%;
+    margin:24px auto;
+}
+.precious-btns2 li:nth-of-type(1) {
+    float:left;
+}
+.precious-btns2 li:nth-of-type(2) {
+    float:right;
+}
+.precious-btns2 li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size:1.6rem;
+    padding:0.6em 0;
+    transition: all 0.1s linear;
+    background-color: #fff;
+    color:#744231;
+    border: 2px solid #744231;
+}
+.precious-btns2 li a:hover {
+    color:#fff;
+    background-color: #744231;
+}
+.precious-img {
+    margin:0 0 80px;
+}
+.precious-img01 {
+    margin:48px 0 72px;
+}
+.precious-img04 {
+    margin:40px 0 0;
+}
+.precious-img06 {
+    margin-bottom:48px;
+}
+.precious-img07 {
+    margin:40px 0;
+}
+.precious-kome {}
+.precious-kome li {
+    font-size:1.4rem;
+    text-indent: -1em;
+    padding:0 0 1em 1em;
+}
+.precious-kome li:before {
+    content:"※";
+}
+.precious-kome li span {
+    color:#c00;
+}
+
+.precious-section01 .tab li a {
+    background-color: #EEE9DF;
+}
+.precious-section01 .tab li.active a {
+    background-color: #74412e;
+    color: #fff;
+}
+
+
+
+/* ------------------------------------------------------------------------ add 20190207 こだわり*/
+.philosophy h3 {
+    padding: 1em 200px;
+    font-size: 3rem;
+    line-height: 1.8;
+}
+.philosophy .backbtn {
+    margin:5em auto 0;
+}
+.philosophy .kodawari-row ul,
+.prod-ul {
+    width:416px;
+    margin:2em auto 0;
+}
+.philosophy .kodawari-row li,
+.prod-ul li {
+    color:#fff;
+    font-size:1.6rem;
+}
+.prod .kodawari-row ul {
+    width:416px;
+    margin:2em auto 0;
+    color:#fff;
+}
+.prod .kodawari-row li a {
+    color:#fff;
+    font-size:1.6rem;
+}
+.prod .kodawari-row li a:hover {
+    text-decoration: none;
+}
+.prod-ul li {
+    font-size:1.8rem;
+    text-align: center;
+}
+.prod-ul li.prod-kome {
+    font-size:1.4rem;
+}
+
+
+.prod .backbtn {
+    margin:5em auto 0;
+}
+
+
+/* ------------------------------------------------------------------------ add 20190212 各ページの画像*/
+.mainvisual {
+    width:100%;
+    padding:0 0 6em;
+}
+.mainvisual img {
+    display: block;
+    width:100%;
+}
+
+
+/* ------------------------------------------------------------------------ add 20190214 マイページ*/
+.mypage-section01 {
+    padding:0 0 6em;
+}
+.mypage-section02 {
+    padding:0 0 6em;
+    border-top: 1px solid #d5cec9;
+}
+.mypage-section .inner {
+    width:660px;
+}
+.mypage-section .error {
+    display:none;
+}
+.mypage-section .backbtn {
+    padding-top:4em;
+}
+.mypage-section .tc {
+    color: #58382b;
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    text-align: center;
+    padding: 48px 0 24px;
+    font-weight: bold;
+}
+.ng-hide {
+    display: none;
 }

@@ -450,6 +450,11 @@ html {
     font-size: 1.8rem;
     line-height: 1.8;
 }
+.u-title.small p {
+    padding:1em 0;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
 .common-section-title {
     font-size: 3rem;
     padding: 1.5em 0 0.5em;
@@ -981,3 +986,352 @@ html {
     float: none;
 }
 
+
+
+/* ------------------------------------------------------------------------ add 20190128 ログイン*/
+.header-point,
+.header-charge {
+    margin:0.8em 0 !important;
+    display: inline-block;
+}
+.header-point {
+    margin-right:1em !important;
+}
+.header-point:before,
+.header-charge:before {
+    padding:0.2em 0.5em;
+    margin-right:1em;
+}
+.header-login_sp {
+    text-align: center;
+    display:block;
+    background-color: #F7F7F7;
+}
+#footer-loginlink {
+    margin-top:0;
+    background-color: #fff;
+    padding-bottom:2em;
+}
+#footer-loginlink li {
+    font-size: 2.4rem;
+    display: block;
+}
+#footer-loginlink li ~ li:before {
+    content:none;
+}
+#footer-loginlink li a {
+    color:#693929;
+    display: block;
+    padding:0.5em 0;
+}
+
+
+
+/* ------------------------------------------------------------------------ add 20190131 クーポンLP*/
+.couponlp-section01 .inner {
+    width:87.5%;
+}
+.couponlp-box {
+    padding:0 0 6em;
+}
+.couponlp-box h3 {
+    position: relative;
+    padding:0.8em 1em 0.8em 6em;
+    background: url(../img/coupon/img01.png) no-repeat 98% 90% #EEE9DF;
+    background-size: 40px;
+}
+.couponlp-box h3.coupon-h3-2:before {
+    line-height: 4.5;
+}
+.couponlp-box h3.coupon-h3-3:before {
+    line-height: 3;
+}
+.couponlp-image {
+    padding:2em 0 1.5em;
+    width:87.5%;
+}
+.couponlp-image img {}
+.couponlp-box h4 {
+    font-size:2.2rem;
+    width:87.5%;
+    padding:0 0 0.6em;
+}
+.couponlp-box h4:before {
+    content:"";
+    width:20px;
+    height:22px;
+    display: inline-block;
+    background: url(../img/coupon/icon01.png) no-repeat left center;
+    background-size: contain;
+    position: relative;
+    top:4px;
+    margin-right:0.4em;
+}
+.couponlp-box ul {
+    width:87.5%;
+    margin:0 auto;
+}
+.couponlp-box li {
+    font-size: 1.8rem;
+}
+.couponlp-btn {
+    width:87.5%;
+    padding:2em 0 0;
+}
+.couponlp-btn a {}
+.couponlp-btn img {}
+.coupon-aboutpc {
+    width:87.5%;
+    margin:0 auto;
+    padding:3em 0 2em;
+}
+.coupon-aboutpc img {
+    display: block;
+    width:100%;
+}
+.backbtn {
+    width:80%;
+    margin:0 auto;
+}
+.backbtn a {
+    display: block;
+    color:#744231;
+    border: 2px solid #744231;
+    text-align: center;
+    text-decoration: none;
+    font-size:1.6rem;
+    padding:0.6em 0;
+    transition: all 0.1s linear;
+}
+.backbtn a:hover {
+    color:#fff;
+    background-color: #744231;
+}
+
+
+/* ------------------------------------------------------------------------ add 20190207 珈琲教室*/
+.school-section01 .inner {
+    width:87.5%;
+    margin:0 auto;
+}
+.schoolinfo,
+.schoolinfo-detail {
+    width:85.7%;
+}
+.schoolinfo {}
+.schoolinfo img {
+    width:100%;
+    margin: 8% auto 6%;
+}
+.schoolinfo p {
+    font-size:1.6rem;
+    line-height: 1.8;
+}
+
+.schoolinfo-detail {
+    padding:4em 0 0;
+}
+.schoolinfo-detail h5 {
+    font-size:1.7rem;
+    padding:0.6em 1em;
+}
+.schoolinfo-detail p {
+    font-size:1.5rem;
+    line-height: 2;
+    padding:1em 1.5em;
+}
+.schoolinfo-detail table {
+    width:100%;
+    margin:0.5em 0 8%;
+}
+.schoolinfo-detail th,
+.schoolinfo-detail td {
+    display: block;
+    width:100%;
+}
+
+
+
+
+/* ------------------------------------------------------------------------ add 20190207 プレシャスメンバーズ*/
+.precious-section01 .inner {
+    width:87.5%;
+}
+.precious-contents-inner {
+    width:100%;
+    padding:32px 0 64px;
+}
+.precious-contents-inner p {
+    font-size:1.6rem;
+}
+.precious-point {
+    margin:1.5em 0;
+}
+.precious-point p {
+    font-size:1.5rem;
+    width: calc(100% - 112px);
+}
+.precious-btns {
+    padding:12px 0 0;
+}
+.precious-btns .precious-btn {
+    width:320px;
+    margin:24px auto;
+}
+.precious-btns .precious-btn a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size:1.6rem;
+    padding:0.6em 0;
+    transition: all 0.1s linear;
+}
+.precious-btns .precious-btn01 a {
+    background-color: #744231;
+    color:#fff;
+    border: 2px solid #744231;
+}
+.precious-btns .precious-btn01 a:hover {
+    color:#fff;
+    background-color: #8C4F3A;
+}
+.precious-btns .precious-btn02 a {
+    color:#744231;
+    border: 2px solid #744231;
+}
+.precious-btns .precious-btn02 a:hover {
+    color:#fff;
+    background-color: #744231;
+}
+.precious-btns2 {
+    padding:12px 0 48px;
+}
+.precious-btns2 li {
+    width:60%;
+    margin:1.5em auto;
+}
+.precious-btns2 li:nth-of-type(1) {
+    float:none;
+}
+.precious-btns2 li:nth-of-type(2) {
+    float:none;
+}
+.precious-btns2 li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size:1.6rem;
+    padding:0.6em 0;
+    transition: all 0.1s linear;
+    background-color: #fff;
+    color:#744231;
+    border: 2px solid #744231;
+}
+.precious-btns2 li a:hover {
+    color:#fff;
+    background-color: #744231;
+}
+.precious-img {
+    margin:0 0 5em;
+}
+.precious-img01 {
+    margin:2em 0 4em;
+}
+.precious-img04 {
+    margin:40px 0 0;
+}
+.precious-img06 {
+    margin-bottom:48px;
+}
+.precious-img07 {
+    margin:40px 0;
+}
+.precious-kome {
+    width:85.7%;
+    margin:0 auto;
+}
+.precious-kome li {
+    font-size:1.2rem;
+}
+
+.precious-section01 .tab li a {
+    background-color: #EEE9DF;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    padding:0.8em 0;
+}
+.precious-section01 .tab li.active a {
+    background-color: #74412e;
+    color: #fff;
+}
+#precious-contents02,
+#precious-contents03 {
+    display:none;
+}
+
+
+
+/* ------------------------------------------------------------------------ add 20190207 こだわり*/
+.philosophy h3 {
+    padding: 1em 0;
+    font-size: 2.4rem;
+    line-height: 1.8;
+}
+.philosophy .backbtn {
+    margin:5em auto 0;
+}
+.philosophy .kodawari-row ul,
+.prod-ul {
+    width: 74.28%;
+    margin:2em auto 0;
+}
+.philosophy .kodawari-row li
+.prod-ul li {
+    color:#fff;
+    font-size:1.6rem;
+}
+.prod-ul {
+    width: 74.28%;
+    margin:2em auto 0;
+}
+.prod-ul li {
+    font-size:1.8rem;
+}
+.prod-ul li.prod-kome {
+    font-size:1.4rem;
+}
+
+.prod .kodawari-row ul {
+    width: 74.28%;
+    margin:2em auto 0;
+}
+.prod .kodawari-row li a {
+    color:#fff;
+    font-size:1.6rem;
+    display: block;
+    padding:0.5em 0;
+}
+.prod .kodawari-row li a:hover {
+    text-decoration: none;
+}
+
+
+.prod .backbtn {
+    margin:5em auto 0;
+}
+
+.mainvisual {
+    width:100%;
+    padding:0 0 2.5em;
+}
+.mainvisual img {
+    display: block;
+    width:100%;
+}
+
+
+/* ------------------------------------------------------------------------ add 20190214 マイページ*/
+.mypage-section {}
+.mypage .inner {
+    width: 87.5%;
+}

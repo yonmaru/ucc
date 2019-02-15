@@ -1,0 +1,506 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/js/slick/slick.css" rel="stylesheet" type="text/css" />
+<link href="/js/slick/slick-theme.css" rel="stylesheet" type="text/css" />
+<link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<!-- ブラウザの横幅が641px以上の場合 -->
+<link href="/css/pc.css" rel="stylesheet" type="text/css" media="screen and (min-width: 641px)" />
+<!-- ブラウザの横幅が640px以下の場合 -->
+<link href="/css/sp.css" rel="stylesheet" type="text/css" media="screen and (max-width: 640px)" />
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script src="/js/common.js"></script>
+</head>
+<body class="mypage">
+<div id="wrapper">
+    <div class="app_bnr">
+        <div id="app_bnr-close"> <span></span> <span></span> </div>
+        <a href="#"> <img src="/img/top/ip-icon.png" alt="">
+        <div class="app_bnr-text">
+            <p>限定クーポンを随時配信！</p>
+            <p>無料でおトクな公式アプリを使う</p>
+        </div>
+        </a> </div>
+    <!-- ***** Start Header Area ***** --> 
+    <!--#include virtual="/ssi/header.html" --> 
+    <!-- ***** //End Header Area ***** -->
+    <article id="article">
+        <section class="u-title">
+            <div class="inner">
+                <h2 class="common-section-title font-ja">会員情報変更<span>MEMBER INFO</span></h2>
+            </div>
+        </section>
+        <section class="mainvisual">
+            <div class="inner"> <img src="/img/sample.jpg" alt=""> </div>
+        </section>
+        <section class="mypage-section01 mypage-section">
+            <div class="inner">
+                <div ng-show="data.error_mail" class="ng-hide">
+                    <p class="error ng-binding"></p>
+                </div>
+                <form name="memberMailForm" ng-submit="submitMail()" novalidate="" class="ng-pristine ng-valid-email ng-valid-maxlength ng-invalid ng-invalid-required ng-valid-pattern">
+                    <div class="member-info-form">
+                        <div class="common-box has-header">
+                            <h3 class="common-box-header">メールアドレス</h3>
+                            <dl class="common-form-list">
+                                <dt>メールアドレス<span class="note">（半角60字以内）</span></dt>
+                                <dd>
+                                    <div ng-show="memberMailForm.mail.$invalid" class="ng-hide"> <span ng-show="memberMailForm.mail.$error.required" class="ng-hide">
+                                        <p class="error">必須項目です</p>
+                                        </span> <span ng-show="memberMailForm.mail.$error.email" class="ng-hide">
+                                        <p class="error">メールアドレスを入力してください</p>
+                                        </span> <span ng-show="memberMailForm.mail.$error.maxlength" class="ng-hide">
+                                        <p class="error">メールアドレスは60文字以内で入力してください</p>
+                                        </span> </div>
+                                    <input type="email" name="mail" value="" ng-model="data.email" ng-maxlength="60" required="" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-email ng-valid-required ng-valid-maxlength">
+                                </dd>
+                            </dl>
+                            <dl class="common-form-list">
+                                <dt>メールアドレス<span class="note">（確認用）</span></dt>
+                                <dd> 
+                                    <!-- ngIf: memberMailForm.mail.$valid -->
+                                    <div ng-if="memberMailForm.mail.$valid" class="ng-scope">
+                                        <div ng-show="memberMailForm.mailConfirm.$invalid"> <span ng-show="memberMailForm.mailConfirm.$error.required">
+                                            <p class="error">必須項目です</p>
+                                            </span> <span ng-show="memberMailForm.mailConfirm.$error.email" class="ng-hide">
+                                            <p class="error">メールアドレスを入力してください</p>
+                                            </span> <span ng-show="memberMailForm.mailConfirm.$error.maxlength" class="ng-hide">
+                                            <p class="error">メールアドレスは60文字以内で入力してください</p>
+                                            </span> 
+                                            <!-- ngIf: !(memberMailForm.mailConfirm.$error.required || memberMailForm.mailConfirm.$error.email || memberMailForm.mailConfirm.$error.maxlength) --> 
+                                        </div>
+                                    </div>
+                                    <!-- end ngIf: memberMailForm.mail.$valid -->
+                                    <input type="email" name="mailConfirm" value="" ng-model="mailConfirm" ng-pattern="soulstationrock@gmail\.com" ng-maxlength="60" required="" class="ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength">
+                                </dd>
+                            </dl>
+                            <div class="button-area">
+                                <ul class="flex-center">
+                                    <li>
+                                        <input class="common-button" type="submit" value="メールアドレス 送信" ng-disabled="memberMailForm.$invalid" disabled="disabled">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div ng-show="data.error_password" class="ng-hide">
+                    <p class="error ng-binding"></p>
+                </div>
+                <form name="memberPasswordForm" ng-submit="submitPassword()" novalidate="" class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">
+                    <div class="member-info-form">
+                        <div class="common-box has-header">
+                            <h3 class="common-box-header">パスワード</h3>
+                            <dl class="common-form-list">
+                                <dt>パスワード</dt>
+                                <dd>
+                                    <input type="password" name="pass" value="●●●●●●●●" ng-readonly="true" readonly="readOnly">
+                                </dd>
+                            </dl>
+                            <dl class="common-form-list">
+                                <dt>新しいパスワード<span class="note">（半角英数8字以上）</span></dt>
+                                <dd>
+                                    <div ng-show="memberPasswordForm.newpass.$invalid"> <span ng-show="memberPasswordForm.newpass.$error.required">
+                                        <p class="error">必須項目です</p>
+                                        </span> <span ng-show="memberPasswordForm.newpass.$error.minlength" class="ng-hide">
+                                        <p class="error">パスワードは8文字以上で入力してください</p>
+                                        </span> <span ng-show="memberPasswordForm.newpass.$error.maxlength" class="ng-hide">
+                                        <p class="error">パスワードは16文字以内で入力してください</p>
+                                        </span> <span ng-show="memberPasswordForm.newpass.$error.pattern" class="ng-hide">
+                                        <p class="error">半角英数字を組み合わせてください。特殊記号 - _ . ! # $ % ^ ¥ @ も利用できます</p>
+                                        </span> </div>
+                                    <input type="password" name="newpass" value="" ng-model="data.newpass" required="" ng-minlength="8" ng-maxlength="16" ng-pattern="/^(?=.*?[a-zA-Z])(?=.*?\d)[a-zA-Z0-9-_\.!#\$%\^\\@]+$/" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">
+                                </dd>
+                            </dl>
+                            <dl class="common-form-list">
+                                <dt>新しいパスワード<span class="note">（確認用）</span></dt>
+                                <dd> 
+                                    <!-- ngIf: memberPasswordForm.newpass.$valid -->
+                                    <input type="password" name="newpassConfirm" value="" ng-model="newpassConfirm" required="" ng-maxlength="30" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength">
+                                </dd>
+                            </dl>
+                            <div class="button-area">
+                                <ul class="flex-center">
+                                    <li>
+                                        <input class="common-button" type="submit" value="パスワード 送信" ng-disabled="memberPasswordForm.$invalid" disabled="disabled">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div ng-show="data.error_profile" class="ng-hide">
+                    <p class="error ng-binding"></p>
+                </div>
+                <form name="memberProfileForm" ng-submit="submitProfile()" novalidate="" class="ng-pristine ng-valid-maxlength ng-valid ng-valid-required">
+                    <div class="member-info-form">
+                        <div class="common-box has-header">
+                            <h3 class="common-box-header">本人確認情報</h3>
+                            <dl class="common-form-list">
+                                <dt>ユーザー名<span class="note">（ニックネーム、60字以内）</span></dt>
+                                <dd> <span ng-show="memberProfileForm.username.$error.required" class="ng-hide">
+                                    <p class="error">必須項目です</p>
+                                    </span> <span ng-show="memberProfileForm.username.$error.maxlength" class="ng-hide">
+                                    <p class="error">ユーザー名は60文字以内で入力してください</p>
+                                    </span>
+                                    <input type="text" name="username" value="" ng-model="data.name" required="" ng-maxlength="60" class="ng-pristine ng-untouched ng-valid-maxlength ng-not-empty ng-valid ng-valid-required">
+                                </dd>
+                            </dl>
+                            <dl class="common-form-list">
+                                <dt>生年月日</dt>
+                                <dd>
+                                    <div ng-show="(memberProfileForm.birthdayYear.$error.required || memberProfileForm.birthdayMonth.$error.required || memberProfileForm.birthdayDay.$error.required)" class="ng-hide">
+                                        <p class="error">必須項目です</p>
+                                    </div>
+                                    <div ng-show="!birthdayValid(data.birthdayYear, data.birthdayMonth, data.birthdayDay)" class="ng-hide">
+                                        <p class="error">不正な日付です</p>
+                                    </div>
+                                    <ul class="birthday-list flex-nowrap align-items-center">
+                                        <li>
+                                            <div class="select-wrapper">
+                                                <select name="birthdayYear" ng-model="data.birthdayYear" ng-options="birthdayYear.value as birthdayYear.label disable when birthdayYear.value == '' for birthdayYear in birthdayYear" required="" disabled="" class="ng-pristine ng-untouched ng-not-empty ng-valid ng-valid-required">
+                                                    <option label="1900" value="string:1900">1900</option>
+                                                    <option label="1901" value="string:1901">1901</option>
+                                                    <option label="1902" value="string:1902">1902</option>
+                                                    <option label="1903" value="string:1903">1903</option>
+                                                    <option label="1904" value="string:1904">1904</option>
+                                                    <option label="1905" value="string:1905">1905</option>
+                                                    <option label="1906" value="string:1906">1906</option>
+                                                    <option label="1907" value="string:1907">1907</option>
+                                                    <option label="1908" value="string:1908">1908</option>
+                                                    <option label="1909" value="string:1909">1909</option>
+                                                    <option label="1910" value="string:1910">1910</option>
+                                                    <option label="1911" value="string:1911">1911</option>
+                                                    <option label="1912" value="string:1912">1912</option>
+                                                    <option label="1913" value="string:1913">1913</option>
+                                                    <option label="1914" value="string:1914">1914</option>
+                                                    <option label="1915" value="string:1915">1915</option>
+                                                    <option label="1916" value="string:1916">1916</option>
+                                                    <option label="1917" value="string:1917">1917</option>
+                                                    <option label="1918" value="string:1918">1918</option>
+                                                    <option label="1919" value="string:1919">1919</option>
+                                                    <option label="1920" value="string:1920">1920</option>
+                                                    <option label="1921" value="string:1921">1921</option>
+                                                    <option label="1922" value="string:1922">1922</option>
+                                                    <option label="1923" value="string:1923">1923</option>
+                                                    <option label="1924" value="string:1924">1924</option>
+                                                    <option label="1925" value="string:1925">1925</option>
+                                                    <option label="1926" value="string:1926">1926</option>
+                                                    <option label="1927" value="string:1927">1927</option>
+                                                    <option label="1928" value="string:1928">1928</option>
+                                                    <option label="1929" value="string:1929">1929</option>
+                                                    <option label="1930" value="string:1930">1930</option>
+                                                    <option label="1931" value="string:1931">1931</option>
+                                                    <option label="1932" value="string:1932">1932</option>
+                                                    <option label="1933" value="string:1933">1933</option>
+                                                    <option label="1934" value="string:1934">1934</option>
+                                                    <option label="1935" value="string:1935">1935</option>
+                                                    <option label="1936" value="string:1936">1936</option>
+                                                    <option label="1937" value="string:1937">1937</option>
+                                                    <option label="1938" value="string:1938">1938</option>
+                                                    <option label="1939" value="string:1939">1939</option>
+                                                    <option label="1940" value="string:1940">1940</option>
+                                                    <option label="1941" value="string:1941">1941</option>
+                                                    <option label="1942" value="string:1942">1942</option>
+                                                    <option label="1943" value="string:1943">1943</option>
+                                                    <option label="1944" value="string:1944">1944</option>
+                                                    <option label="1945" value="string:1945">1945</option>
+                                                    <option label="1946" value="string:1946">1946</option>
+                                                    <option label="1947" value="string:1947">1947</option>
+                                                    <option label="1948" value="string:1948">1948</option>
+                                                    <option label="1949" value="string:1949">1949</option>
+                                                    <option label="1950" value="string:1950">1950</option>
+                                                    <option disabled="" label="年(西暦)" value="string:">年(西暦)</option>
+                                                    <option label="1951" value="string:1951">1951</option>
+                                                    <option label="1952" value="string:1952">1952</option>
+                                                    <option label="1953" value="string:1953">1953</option>
+                                                    <option label="1954" value="string:1954">1954</option>
+                                                    <option label="1955" value="string:1955">1955</option>
+                                                    <option label="1956" value="string:1956">1956</option>
+                                                    <option label="1957" value="string:1957">1957</option>
+                                                    <option label="1958" value="string:1958">1958</option>
+                                                    <option label="1959" value="string:1959">1959</option>
+                                                    <option label="1960" value="string:1960">1960</option>
+                                                    <option label="1961" value="string:1961">1961</option>
+                                                    <option label="1962" value="string:1962">1962</option>
+                                                    <option label="1963" value="string:1963">1963</option>
+                                                    <option label="1964" value="string:1964">1964</option>
+                                                    <option label="1965" value="string:1965">1965</option>
+                                                    <option label="1966" value="string:1966">1966</option>
+                                                    <option label="1967" value="string:1967">1967</option>
+                                                    <option label="1968" value="string:1968">1968</option>
+                                                    <option label="1969" value="string:1969">1969</option>
+                                                    <option label="1970" value="string:1970">1970</option>
+                                                    <option label="1971" value="string:1971">1971</option>
+                                                    <option label="1972" value="string:1972">1972</option>
+                                                    <option label="1973" value="string:1973">1973</option>
+                                                    <option label="1974" value="string:1974">1974</option>
+                                                    <option label="1975" value="string:1975">1975</option>
+                                                    <option label="1976" value="string:1976">1976</option>
+                                                    <option label="1977" value="string:1977">1977</option>
+                                                    <option label="1978" value="string:1978">1978</option>
+                                                    <option label="1979" value="string:1979">1979</option>
+                                                    <option label="1980" value="string:1980">1980</option>
+                                                    <option label="1981" value="string:1981">1981</option>
+                                                    <option label="1982" value="string:1982" selected="selected">1982</option>
+                                                    <option label="1983" value="string:1983">1983</option>
+                                                    <option label="1984" value="string:1984">1984</option>
+                                                    <option label="1985" value="string:1985">1985</option>
+                                                    <option label="1986" value="string:1986">1986</option>
+                                                    <option label="1987" value="string:1987">1987</option>
+                                                    <option label="1988" value="string:1988">1988</option>
+                                                    <option label="1989" value="string:1989">1989</option>
+                                                    <option label="1990" value="string:1990">1990</option>
+                                                    <option label="1991" value="string:1991">1991</option>
+                                                    <option label="1992" value="string:1992">1992</option>
+                                                    <option label="1993" value="string:1993">1993</option>
+                                                    <option label="1994" value="string:1994">1994</option>
+                                                    <option label="1995" value="string:1995">1995</option>
+                                                    <option label="1996" value="string:1996">1996</option>
+                                                    <option label="1997" value="string:1997">1997</option>
+                                                    <option label="1998" value="string:1998">1998</option>
+                                                    <option label="1999" value="string:1999">1999</option>
+                                                    <option label="2000" value="string:2000">2000</option>
+                                                    <option label="2001" value="string:2001">2001</option>
+                                                    <option label="2002" value="string:2002">2002</option>
+                                                    <option label="2003" value="string:2003">2003</option>
+                                                    <option label="2004" value="string:2004">2004</option>
+                                                    <option label="2005" value="string:2005">2005</option>
+                                                    <option label="2006" value="string:2006">2006</option>
+                                                    <option label="2007" value="string:2007">2007</option>
+                                                    <option label="2008" value="string:2008">2008</option>
+                                                    <option label="2009" value="string:2009">2009</option>
+                                                    <option label="2010" value="string:2010">2010</option>
+                                                    <option label="2011" value="string:2011">2011</option>
+                                                    <option label="2012" value="string:2012">2012</option>
+                                                    <option label="2013" value="string:2013">2013</option>
+                                                    <option label="2014" value="string:2014">2014</option>
+                                                    <option label="2015" value="string:2015">2015</option>
+                                                    <option label="2016" value="string:2016">2016</option>
+                                                    <option label="2017" value="string:2017">2017</option>
+                                                    <option label="2018" value="string:2018">2018</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li>/</li>
+                                        <li>
+                                            <div class="select-wrapper">
+                                                <select name="birthdayMonth" ng-model="data.birthdayMonth" ng-options="birthdayMonth.value as birthdayMonth.label  for birthdayMonth in birthdayMonth" required="" disabled="" class="ng-pristine ng-untouched ng-not-empty ng-valid ng-valid-required">
+                                                    <option value="" disabled="" class="">月</option>
+                                                    <option label="1" value="string:01">1</option>
+                                                    <option label="2" value="string:02" selected="selected">2</option>
+                                                    <option label="3" value="string:03">3</option>
+                                                    <option label="4" value="string:04">4</option>
+                                                    <option label="5" value="string:05">5</option>
+                                                    <option label="6" value="string:06">6</option>
+                                                    <option label="7" value="string:07">7</option>
+                                                    <option label="8" value="string:08">8</option>
+                                                    <option label="9" value="string:09">9</option>
+                                                    <option label="10" value="string:10">10</option>
+                                                    <option label="11" value="string:11">11</option>
+                                                    <option label="12" value="string:12">12</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li>/</li>
+                                        <li>
+                                            <div class="select-wrapper">
+                                                <select name="birthdayDay" ng-model="data.birthdayDay" ng-options="birthdayDay.value as birthdayDay.label  for birthdayDay in birthdayDay" required="" disabled="" class="ng-pristine ng-untouched ng-not-empty ng-valid ng-valid-required">
+                                                    <option value="" disabled="" class="">日</option>
+                                                    <option label="1" value="string:01">1</option>
+                                                    <option label="2" value="string:02">2</option>
+                                                    <option label="3" value="string:03">3</option>
+                                                    <option label="4" value="string:04">4</option>
+                                                    <option label="5" value="string:05">5</option>
+                                                    <option label="6" value="string:06">6</option>
+                                                    <option label="7" value="string:07">7</option>
+                                                    <option label="8" value="string:08">8</option>
+                                                    <option label="9" value="string:09">9</option>
+                                                    <option label="10" value="string:10">10</option>
+                                                    <option label="11" value="string:11">11</option>
+                                                    <option label="12" value="string:12">12</option>
+                                                    <option label="13" value="string:13">13</option>
+                                                    <option label="14" value="string:14">14</option>
+                                                    <option label="15" value="string:15">15</option>
+                                                    <option label="16" value="string:16">16</option>
+                                                    <option label="17" value="string:17">17</option>
+                                                    <option label="18" value="string:18">18</option>
+                                                    <option label="19" value="string:19">19</option>
+                                                    <option label="20" value="string:20">20</option>
+                                                    <option label="21" value="string:21">21</option>
+                                                    <option label="22" value="string:22">22</option>
+                                                    <option label="23" value="string:23">23</option>
+                                                    <option label="24" value="string:24" selected="selected">24</option>
+                                                    <option label="25" value="string:25">25</option>
+                                                    <option label="26" value="string:26">26</option>
+                                                    <option label="27" value="string:27">27</option>
+                                                    <option label="28" value="string:28">28</option>
+                                                    <option label="29" value="string:29">29</option>
+                                                    <option label="30" value="string:30">30</option>
+                                                    <option label="31" value="string:31">31</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <p class="note text p0 mt-small">※ 登録後に、生年月日を変更することはできません。</p>
+                                </dd>
+                            </dl>
+                            <dl class="common-form-list">
+                                <dt>性別</dt>
+                                <dd>
+                                    <ul class="radio-list">
+                                        <li class="mr30">
+                                            <label>
+                                                <input type="radio" name="gender" value="1" ng-model="data.gender" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                                <span>男性</span></label>
+                                        </li>
+                                        <li class="mr30">
+                                            <label>
+                                                <input type="radio" name="gender" value="2" ng-model="data.gender" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                                <span>女性</span></label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="gender" value="" ng-model="data.gender" checked="" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                                <span>回答なし</span></label>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl class="common-form-list">
+                                <dt>お住まいの都道府県</dt>
+                                <dd>
+                                    <div ng-show="memberProfileForm.prefectures.$invalid" class="ng-hide"> <span ng-show="memberProfileForm.prefectures.$error.required" class="ng-hide">
+                                        <p class="error">必須項目です</p>
+                                        </span> </div>
+                                    <div class="select-wrapper">
+                                        <select name="prefectures" ng-model="data.prefecture" ng-options="prefecture.label as prefecture.label  for prefecture in prefectures" required="" class="ng-pristine ng-untouched ng-not-empty ng-valid ng-valid-required">
+                                            <option value="" disabled="" class="">選択してください</option>
+                                            <option label="北海道" value="string:北海道">北海道</option>
+                                            <option label="青森県" value="string:青森県">青森県</option>
+                                            <option label="岩手県" value="string:岩手県">岩手県</option>
+                                            <option label="宮城県" value="string:宮城県">宮城県</option>
+                                            <option label="秋田県" value="string:秋田県">秋田県</option>
+                                            <option label="山形県" value="string:山形県">山形県</option>
+                                            <option label="福島県" value="string:福島県">福島県</option>
+                                            <option label="茨城県" value="string:茨城県">茨城県</option>
+                                            <option label="栃木県" value="string:栃木県">栃木県</option>
+                                            <option label="群馬県" value="string:群馬県">群馬県</option>
+                                            <option label="埼玉県" value="string:埼玉県">埼玉県</option>
+                                            <option label="千葉県" value="string:千葉県">千葉県</option>
+                                            <option label="東京都" value="string:東京都">東京都</option>
+                                            <option label="神奈川県" value="string:神奈川県" selected="selected">神奈川県</option>
+                                            <option label="新潟県" value="string:新潟県">新潟県</option>
+                                            <option label="富山県" value="string:富山県">富山県</option>
+                                            <option label="石川県" value="string:石川県">石川県</option>
+                                            <option label="福井県" value="string:福井県">福井県</option>
+                                            <option label="山梨県" value="string:山梨県">山梨県</option>
+                                            <option label="長野県" value="string:長野県">長野県</option>
+                                            <option label="岐阜県" value="string:岐阜県">岐阜県</option>
+                                            <option label="静岡県" value="string:静岡県">静岡県</option>
+                                            <option label="愛知県" value="string:愛知県">愛知県</option>
+                                            <option label="三重県" value="string:三重県">三重県</option>
+                                            <option label="滋賀県" value="string:滋賀県">滋賀県</option>
+                                            <option label="京都府" value="string:京都府">京都府</option>
+                                            <option label="大阪府" value="string:大阪府">大阪府</option>
+                                            <option label="兵庫県" value="string:兵庫県">兵庫県</option>
+                                            <option label="奈良県" value="string:奈良県">奈良県</option>
+                                            <option label="和歌山県" value="string:和歌山県">和歌山県</option>
+                                            <option label="鳥取県" value="string:鳥取県">鳥取県</option>
+                                            <option label="島根県" value="string:島根県">島根県</option>
+                                            <option label="岡山県" value="string:岡山県">岡山県</option>
+                                            <option label="広島県" value="string:広島県">広島県</option>
+                                            <option label="山口県" value="string:山口県">山口県</option>
+                                            <option label="徳島県" value="string:徳島県">徳島県</option>
+                                            <option label="香川県" value="string:香川県">香川県</option>
+                                            <option label="愛媛県" value="string:愛媛県">愛媛県</option>
+                                            <option label="高知県" value="string:高知県">高知県</option>
+                                            <option label="福岡県" value="string:福岡県">福岡県</option>
+                                            <option label="佐賀県" value="string:佐賀県">佐賀県</option>
+                                            <option label="長崎県" value="string:長崎県">長崎県</option>
+                                            <option label="熊本県" value="string:熊本県">熊本県</option>
+                                            <option label="大分県" value="string:大分県">大分県</option>
+                                            <option label="宮崎県" value="string:宮崎県">宮崎県</option>
+                                            <option label="鹿児島県" value="string:鹿児島県">鹿児島県</option>
+                                            <option label="沖縄県" value="string:沖縄県">沖縄県</option>
+                                        </select>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <div class="button-area">
+                                <ul class="flex-center">
+                                    <li>
+                                        <input class="common-button" type="submit" value="本人確認情報 送信" ng-disabled="memberProfileForm.$invalid || !birthdayValid(data.birthdayYear, data.birthdayMonth, data.birthdayDay)">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="mypage-section02 mypage-section">
+            <div class="inner">
+                <h2 class="tc font-ja">退会</h2>
+                <p class="unsubscribe-text"> 退会はこちらから行うことができます。退会後、登録済みのカードは、未登録の状態となります。なお、一度退会されますと、全ての本会員サービスがご利用できなくなり、会員としての一切の権利を失いますのでご了承ください。 </p>
+                <form name="memberUnsubscribeForm" ng-submit="submitUnsubscribe()" novalidate="" class="ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength">
+                    <div class="unsubscribe-form">
+                        <div class="common-box">
+                            <dl class="common-form-list">
+                                <dt>退会理由</dt>
+                                <dd>
+                                    <div ng-show="memberUnsubscribeForm.unsubscribeReasons.$invalid"> <span ng-show="memberUnsubscribeForm.unsubscribeReasons.$error.required">
+                                        <p class="error">退会理由を選択してください</p>
+                                        </span> </div>
+                                    <div class="select-wrapper unsubscribe-reason">
+                                        <select name="unsubscribeReasons" ng-model="data.unsubscribeReason" ng-options="unsubscribeReason.value as unsubscribeReason.label  for unsubscribeReason in unsubscribeReasons" required="" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required">
+                                            <option value="" disabled="" class="" selected="selected">選択してください</option>
+                                            <option label="会員メリットが感じられない" value="string:1">会員メリットが感じられない</option>
+                                            <option label="MEMBERSサイトが使いにくい" value="string:2">MEMBERSサイトが使いにくい</option>
+                                            <option label="アプリが使いにくい" value="string:3">アプリが使いにくい</option>
+                                            <option label="店舗を利用しなくなった" value="string:4">店舗を利用しなくなった</option>
+                                            <option label="その他" value="string:5">その他</option>
+                                        </select>
+                                    </div>
+                                    <textarea class="row3 ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength ng-hide" maxlength="100" ng-model="data.remarks" ng-show="data.unsubscribeReason == 5"></textarea>
+                                </dd>
+                            </dl>
+                            <div class="button-area">
+                                <ul class="flex-center">
+                                    <li>
+                                        <input class="common-button" type="submit" value="退会" ng-disabled="memberUnsubscribeForm.$invalid" disabled="disabled">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="backbtn">
+                            <a href="/">戻　る</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </article>
+    <!-- ***** Start Header Area ***** --> 
+    <!--#include virtual="/ssi/footer.html" --> 
+    <!-- ***** //End Header Area ***** --> 
+</div>
+<!--[if lt IE 9]>
+<script src="/js/html5shiv.js"></script>
+<script src="/js/respond.min.js"></script>
+<![endif]--> 
+<script src="/js/slick/slick.min.js"></script>
+</body>
+</html>

@@ -46,6 +46,7 @@ $(function () {
     var windowWidth = $(window).width();
     var windowSm = 640;
     if (windowWidth <= windowSm) {
+        $('#footer-loginlink').prependTo('#footer');
         $('#footer-links').insertBefore('#insert-anc');
         $('#footer-nav1').insertAfter('#footer-nav2 ul');
         $('#footer-nav2').insertAfter('#insert-anc');
@@ -93,6 +94,31 @@ $(function () {
         }
     });
     
+    $("#precious-tab1").click(function() {
+        $("#precious-tab li").removeClass("active");
+        $(this).parent("li").addClass("active");
+        $("#precious-contents02").css("display","none");
+        $("#precious-contents03").css("display","none");
+        $("#precious-contents01").css("display","block");
+        return false;
+    });
+    $("#precious-tab2").click(function() {
+        $("#precious-tab li").removeClass("active");
+        $(this).parent("li").addClass("active");
+        $("#precious-contents01").css("display","none");
+        $("#precious-contents03").css("display","none");
+        $("#precious-contents02").css("display","block");
+        return false;
+    });
+    $("#precious-tab3").click(function() {
+        $("#precious-tab li").removeClass("active");
+        $(this).parent("li").addClass("active");
+        $("#precious-contents01").css("display","none");
+        $("#precious-contents02").css("display","none");
+        $("#precious-contents03").css("display","block");
+        return false;
+    });
+
 });
 
 

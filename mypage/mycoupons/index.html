@@ -1,0 +1,223 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/js/slick/slick.css" rel="stylesheet" type="text/css" />
+<link href="/js/slick/slick-theme.css" rel="stylesheet" type="text/css" />
+<link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<!-- ブラウザの横幅が641px以上の場合 -->
+<link href="/css/pc.css" rel="stylesheet" type="text/css" media="screen and (min-width: 641px)" />
+<!-- ブラウザの横幅が640px以下の場合 -->
+<link href="/css/sp.css" rel="stylesheet" type="text/css" media="screen and (max-width: 640px)" />
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script src="/js/common.js"></script>
+</head>
+<body class="mypage mycoupons">
+<div id="wrapper">
+    <div class="app_bnr">
+        <div id="app_bnr-close"> <span></span> <span></span> </div>
+        <a href="#"> <img src="/img/top/ip-icon.png" alt="">
+        <div class="app_bnr-text">
+            <p>限定クーポンを随時配信！</p>
+            <p>無料でおトクな公式アプリを使う</p>
+        </div>
+        </a> </div>
+    <!-- ***** Start Header Area ***** --> 
+    <!--#include virtual="/ssi/header.html" --> 
+    <!-- ***** //End Header Area ***** -->
+    <article id="article">
+        <section class="u-title">
+            <div class="inner">
+                <h2 class="common-section-title font-ja">My クーポン<span>MY COUPONS</span></h2>
+            </div>
+        </section>
+        <section class="mainvisual">
+            <div class="inner"> <img src="/img/sample.jpg" alt=""> </div>
+        </section>
+        <section class="mycoupons-section01 mycoupons-section">
+            <main class="ng-scope">
+                <div ng-show="data.error" class="ng-hide">
+                    <p class="error ng-binding"></p>
+                </div>
+                <!-- ngRepeat: coupon in data.coupons | orderBy: ['open_at', 'close_at'] | limitTo:50 -->
+                <dl class="coupon-list ng-scope" ng-repeat="coupon in data.coupons | orderBy: ['open_at', 'close_at'] | limitTo:50">
+                    <dt class="ng-binding">上島珈琲店　自由が丘店改装リニューアル記念10％OFFクーポン</dt>
+                    <dd>
+                        <div class="img"> <img src="https://s3-ap-northeast-1.amazonaws.com/precious-members.ufs.co.jp/00005019/改装10％OFFクーポン（自由が丘店）.jpg" alt=""> </div>
+                        <div class="info">
+                            <dl class="expiration-date">
+                                <dt>有効期限</dt>
+                                <dd> 
+                                    <!-- ngIf: coupon.open_at -->
+                                    <p ng-if="coupon.open_at" class="ng-binding ng-scope">2019年1月24日</p>
+                                    <!-- end ngIf: coupon.open_at --> 
+                                    <!-- ngIf: !coupon.open_at --> 
+                                    <!-- ngIf: coupon.close_at -->
+                                    <p ng-if="coupon.close_at" class="ng-binding ng-scope">2019年3月31日</p>
+                                    <!-- end ngIf: coupon.close_at --> 
+                                    <!-- ngIf: !coupon.close_at --> 
+                                </dd>
+                            </dl>
+                            <div class="button-area">
+                                <p class="remaining" ng-show="coupon.available_count > 0">残り使用回数 <span class="ng-binding">1</span>回</p>
+                                <a class="common-button em" href="" ng-click="submit(coupon.id)">このクーポンを見る</a> </div>
+                        </div>
+                    </dd>
+                </dl>
+                <!-- end ngRepeat: coupon in data.coupons | orderBy: ['open_at', 'close_at'] | limitTo:50 -->
+                <dl class="coupon-list ng-scope" ng-repeat="coupon in data.coupons | orderBy: ['open_at', 'close_at'] | limitTo:50">
+                    <dt class="ng-binding">＜PRECIOUS MEMBERS様限定＞上島珈琲店『バタースコッチミルク珈琲』お試し50円引きクーポン</dt>
+                    <dd>
+                        <div class="img"> <img src="https://s3-ap-northeast-1.amazonaws.com/precious-members.ufs.co.jp/00005019/上島ﾊﾞﾀｰｽｺｯﾁｸｰﾎﾟﾝ.jpg" alt=""> </div>
+                        <div class="info">
+                            <dl class="expiration-date">
+                                <dt>有効期限</dt>
+                                <dd> 
+                                    <!-- ngIf: coupon.open_at -->
+                                    <p ng-if="coupon.open_at" class="ng-binding ng-scope">2019年2月5日</p>
+                                    <!-- end ngIf: coupon.open_at --> 
+                                    <!-- ngIf: !coupon.open_at --> 
+                                    <!-- ngIf: coupon.close_at -->
+                                    <p ng-if="coupon.close_at" class="ng-binding ng-scope">2019年2月19日</p>
+                                    <!-- end ngIf: coupon.close_at --> 
+                                    <!-- ngIf: !coupon.close_at --> 
+                                </dd>
+                            </dl>
+                            <div class="button-area">
+                                <p class="remaining" ng-show="coupon.available_count > 0">残り使用回数 <span class="ng-binding">1</span>回</p>
+                                <a class="common-button em" href="" ng-click="submit(coupon.id)">このクーポンを見る</a> </div>
+                        </div>
+                    </dd>
+                </dl>
+                <!-- end ngRepeat: coupon in data.coupons | orderBy: ['open_at', 'close_at'] | limitTo:50 -->
+                <dl class="coupon-list ng-scope" ng-repeat="coupon in data.coupons | orderBy: ['open_at', 'close_at'] | limitTo:50">
+                    <dt class="ng-binding">＜PRECIOUS MEMBERS様限定＞上島珈琲店『苺ミルク』お試し50円引きクーポン</dt>
+                    <dd>
+                        <div class="img"> <img src="https://s3-ap-northeast-1.amazonaws.com/precious-members.ufs.co.jp/00005019/上島苺ﾐﾙｸｸｰﾎﾟﾝ.jpg" alt=""> </div>
+                        <div class="info">
+                            <dl class="expiration-date">
+                                <dt>有効期限</dt>
+                                <dd> 
+                                    <!-- ngIf: coupon.open_at -->
+                                    <p ng-if="coupon.open_at" class="ng-binding ng-scope">2019年2月5日</p>
+                                    <!-- end ngIf: coupon.open_at --> 
+                                    <!-- ngIf: !coupon.open_at --> 
+                                    <!-- ngIf: coupon.close_at -->
+                                    <p ng-if="coupon.close_at" class="ng-binding ng-scope">2019年2月19日</p>
+                                    <!-- end ngIf: coupon.close_at --> 
+                                    <!-- ngIf: !coupon.close_at --> 
+                                </dd>
+                            </dl>
+                            <div class="button-area">
+                                <p class="remaining" ng-show="coupon.available_count > 0">残り使用回数 <span class="ng-binding">1</span>回</p>
+                                <a class="common-button em" href="" ng-click="submit(coupon.id)">このクーポンを見る</a> </div>
+                        </div>
+                    </dd>
+                </dl>
+                <!-- end ngRepeat: coupon in data.coupons | orderBy: ['open_at', 'close_at'] | limitTo:50 -->
+                <dl class="coupon-list ng-scope" ng-repeat="coupon in data.coupons | orderBy: ['open_at', 'close_at'] | limitTo:50">
+                    <dt class="ng-binding">＜100円引き＞UCCカフェプラザ・ブックス＆カフェ他★春限定メニューお試しクーポン★</dt>
+                    <dd>
+                        <div class="img"> <img src="https://s3-ap-northeast-1.amazonaws.com/precious-members.ufs.co.jp/00005019/ﾌﾟﾗｻﾞ･ｺﾝﾌｫｰﾄｸｰﾎﾟﾝ.jpg" alt=""> </div>
+                        <div class="info">
+                            <dl class="expiration-date">
+                                <dt>有効期限</dt>
+                                <dd> 
+                                    <!-- ngIf: coupon.open_at -->
+                                    <p ng-if="coupon.open_at" class="ng-binding ng-scope">2019年2月5日</p>
+                                    <!-- end ngIf: coupon.open_at --> 
+                                    <!-- ngIf: !coupon.open_at --> 
+                                    <!-- ngIf: coupon.close_at -->
+                                    <p ng-if="coupon.close_at" class="ng-binding ng-scope">2019年2月28日</p>
+                                    <!-- end ngIf: coupon.close_at --> 
+                                    <!-- ngIf: !coupon.close_at --> 
+                                </dd>
+                            </dl>
+                            <div class="button-area">
+                                <p class="remaining" ng-show="coupon.available_count > 0">残り使用回数 <span class="ng-binding">1</span>回</p>
+                                <a class="common-button em" href="" ng-click="submit(coupon.id)">このクーポンを見る</a> </div>
+                        </div>
+                    </dd>
+                </dl>
+                <!-- end ngRepeat: coupon in data.coupons | orderBy: ['open_at', 'close_at'] | limitTo:50 -->
+                <dl class="coupon-list ng-scope" ng-repeat="coupon in data.coupons | orderBy: ['open_at', 'close_at'] | limitTo:50">
+                    <dt class="ng-binding">＜100円引き＞カフェラ・神戸カプチーノ倶楽部他★春限定メニューお試しクーポン★</dt>
+                    <dd>
+                        <div class="img"> <img src="https://s3-ap-northeast-1.amazonaws.com/precious-members.ufs.co.jp/00005019/ｶﾌｪﾗｸｰﾎﾟﾝ.jpg" alt=""> </div>
+                        <div class="info">
+                            <dl class="expiration-date">
+                                <dt>有効期限</dt>
+                                <dd> 
+                                    <!-- ngIf: coupon.open_at -->
+                                    <p ng-if="coupon.open_at" class="ng-binding ng-scope">2019年2月5日</p>
+                                    <!-- end ngIf: coupon.open_at --> 
+                                    <!-- ngIf: !coupon.open_at --> 
+                                    <!-- ngIf: coupon.close_at -->
+                                    <p ng-if="coupon.close_at" class="ng-binding ng-scope">2019年2月28日</p>
+                                    <!-- end ngIf: coupon.close_at --> 
+                                    <!-- ngIf: !coupon.close_at --> 
+                                </dd>
+                            </dl>
+                            <div class="button-area">
+                                <p class="remaining" ng-show="coupon.available_count > 0">残り使用回数 <span class="ng-binding">1</span>回</p>
+                                <a class="common-button em" href="" ng-click="submit(coupon.id)">このクーポンを見る</a> </div>
+                        </div>
+                    </dd>
+                </dl>
+                <!-- end ngRepeat: coupon in data.coupons | orderBy: ['open_at', 'close_at'] | limitTo:50 -->
+                <dl class="coupon-list ng-scope" ng-repeat="coupon in data.coupons | orderBy: ['open_at', 'close_at'] | limitTo:50">
+                    <dt class="ng-binding">＜100円引き＞ウィーンの森★春限定メニューお試しクーポン★</dt>
+                    <dd>
+                        <div class="img"> <img src="https://s3-ap-northeast-1.amazonaws.com/precious-members.ufs.co.jp/00005019/ｳｨｰﾝｸｰﾎﾟﾝ.jpg" alt=""> </div>
+                        <div class="info">
+                            <dl class="expiration-date">
+                                <dt>有効期限</dt>
+                                <dd> 
+                                    <!-- ngIf: coupon.open_at -->
+                                    <p ng-if="coupon.open_at" class="ng-binding ng-scope">2019年2月5日</p>
+                                    <!-- end ngIf: coupon.open_at --> 
+                                    <!-- ngIf: !coupon.open_at --> 
+                                    <!-- ngIf: coupon.close_at -->
+                                    <p ng-if="coupon.close_at" class="ng-binding ng-scope">2019年2月28日</p>
+                                    <!-- end ngIf: coupon.close_at --> 
+                                    <!-- ngIf: !coupon.close_at --> 
+                                </dd>
+                            </dl>
+                            <div class="button-area">
+                                <p class="remaining" ng-show="coupon.available_count > 0">残り使用回数 <span class="ng-binding">1</span>回</p>
+                                <a class="common-button em" href="" ng-click="submit(coupon.id)">このクーポンを見る</a> </div>
+                        </div>
+                    </dd>
+                </dl>
+                <!-- end ngRepeat: coupon in data.coupons | orderBy: ['open_at', 'close_at'] | limitTo:50 -->
+                <div ng-show="!hasCoupon" class="ng-hide">
+                    <p class="text mb-base">クーポンはございません。</p>
+                </div>
+                <div class="backbtn">
+                    <a href="/">戻　る</a>
+                </div>
+            </main>
+        </section>
+    </article>
+    <!-- ***** Start Header Area ***** --> 
+    <!--#include virtual="/ssi/footer.html" --> 
+    <!-- ***** //End Header Area ***** --> 
+</div>
+<!--[if lt IE 9]>
+<script src="/js/html5shiv.js"></script>
+<script src="/js/respond.min.js"></script>
+<![endif]--> 
+<script src="/js/slick/slick.min.js"></script>
+</body>
+</html>
