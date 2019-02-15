@@ -152,7 +152,8 @@ input[type=radio] {
 input[type=radio] + span {
     position: relative;
     display: inline-block;
-    padding-left: 20px
+    padding-left: 20px;
+    line-height: 1;
 }
 
 input[type=radio] + span:before {
@@ -670,13 +671,13 @@ footer .group:before {
     display: inline-block;
     min-width: 180px;
     max-width: 100%;
-    height: 36px;
+    height: auto;
     padding: 11px 0;
     border: 0;
     border-radius: 3px;
     background: #713d31;
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: #fff;
     cursor: pointer
 }
