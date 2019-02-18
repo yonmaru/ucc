@@ -1335,3 +1335,28 @@ html {
 .mypage .inner {
     width: 87.5%;
 }
+
+
+
+
+/* ------------------------------------------------------------------------ add 20190215 こだわり*/
+.philosophy-content h5:before {
+    width: 20px;
+    height: 22px;
+    top: 4px;
+}
+.philosophy-content img.image-left,
+.philosophy-content img.image-right {
+    width:50%;
+}
+.philosophy-content img.image-wide {
+    margin:2em 0;
+}
+.philosophy-inner-row li a {
+    font-size:1.6rem;
+}
+.philosophy-inner-row li a span {
+    display: block;
+    font-size:2rem;
+}
+

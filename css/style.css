@@ -2056,6 +2056,7 @@
     margin:2em auto 0;
 }
 .philosophy .kodawari-row li,
+.philosophy .kodawari-row li a,
 .prod-ul li {
     color:#fff;
     font-size:1.6rem;
@@ -2069,7 +2070,8 @@
     color:#fff;
     font-size:1.6rem;
 }
-.prod .kodawari-row li a:hover {
+.prod .kodawari-row li a:hover,
+.koodawari-link:hover {
     text-decoration: none;
 }
 .prod-ul li {
@@ -2136,4 +2138,104 @@
 
 .food .procat-outer {
     padding-top:5em;
+}
+
+
+
+
+/* ------------------------------------------------------------------------ add 20190215 こだわり*/
+.philosophy-content {
+    padding:4em 0 0;
+}
+.philosophy-content p {
+    font-size:1.8rem;
+    line-height: 2;
+}
+.philosophy-content p + p {
+    padding:1em 0 0;
+}
+.philosophy-content h5 {
+    font-size:2.2rem;
+    line-height: 1.8;
+    padding:2em 0 1em;
+    color:#74412e;
+}
+.philosophy-content h5.phi-first {
+    padding:0 0 1em;
+}
+.philosophy-content h5:before {
+    content: "";
+    width: 28px;
+    height: 32px;
+    display: inline-block;
+    background: url(../img/coupon/icon01.png) no-repeat left center;
+    background-size: contain;
+    position: relative;
+    top: 6px;
+    margin-right: 0.4em;
+}
+.philosophy-content img.image-left,
+.philosophy-content img.image-right {
+    width:40%;
+}
+.philosophy-content img.image-left {
+    float:left;
+    margin:0 2em 1em 0;
+}
+.philosophy-content img.image-right {
+    float:right;
+    margin:0 0 1em 2em;
+}
+.philosophy-content img.image-wide {
+    width:100%;
+    margin:4em 0;
+}
+.philosophy-content img.image-wide-mt0 {
+    margin: 0 0 2em !important;
+}
+.philosophy-inner-row + .philosophy-inner-row {
+    padding:2em 0 0;
+}
+.philosophy-inner-row ul {
+    margin-top:3em;
+    border-right:1px solid #74412e;
+    border-bottom:1px solid #74412e;
+}
+.philosophy-inner-row li {
+    width:33.33%;
+    float:left;
+}
+.philosophy-inner-row li a {
+    padding:1em;
+    display: block;
+    width:100%;
+    text-align: center;
+    border-top:1px solid #74412e;
+    border-left:1px solid #74412e;
+    position: relative;
+    font-size:1.8rem;
+    color:#74412e;
+    font-weight: bold;
+}
+.philosophy-inner-row li a:after {
+    content:"";
+    display:block;
+    width:6px;
+    height:6px;
+    border-top:2px solid #74412e;
+    border-right:2px solid #74412e;
+    position: absolute;
+	top: 50%;
+	right: 5%;
+	-webkit-transform: translate(0%, -50%) rotate(45deg);
+	-moz-transform: translate(0%, -50%) rotate(45deg);
+	-ms-transform: translate(0%, -50%) rotate(45deg);
+	-o-transform: translate(0%, -50%) rotate(45deg);
+	transform: translate(0%, -50%) rotate(45deg);
+}
+.phi-kome {
+    padding-top:2em;
+    display: block;
+    font-size:1.3rem;
+    line-height: 1.8 !important;
 }
